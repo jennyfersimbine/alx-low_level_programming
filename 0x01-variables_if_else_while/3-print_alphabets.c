@@ -1,127 +1,28 @@
 #include <stdio.h>
-	
 #include <stdlib.h>
 
-
-
-/**                                                                                                                                     
-
- * main - Entry point                                                                                                                   
-
- *                                                                                                                                      
-
- *Return: Always 0 (Success)                                                                                                            
-
- */
-
-
+/**
+* main - Entry point
+ **Return: Always 0 (Success)
+*/
 
 int main(void)
-	
 {
-	
-        char alphab;
-	
+	char alphabL;
+	char alphabU;
 
-	
-        alphab = 'a';
-	
-        while (alphab <= 'z')
-		
-        {
-		
-                putchar(alphab);
-		
-                alphab = alphab + 1;
-		
-        }
-	
-        putchar('\n');
-	
-        return (0);
-	
-}#include <stdio.h>
-
-#include <stdlib.h>
-
-
-
- /**                                                                                                                                     
-
-  * main - Entry point                                                                                                                   
-
-  *                                                                                                                                      
-
-  *Return: Always 0 (Success)                                                                                                            
-
-  */
-
-
-
-int main(void)
-
-{
-	
-        char alphab;
-	
-
-	
-        alphab = 'a';
-	
-        while (alphab <= 'z')
-		
-        {
-		
-                putchar(alphab);
-		
-                alphab = alphab + 1;
-		
-        }
-	
-        putchar('\n');
-	
-        return (0);
-	
-}#include <stdio.h>
-
-#include <stdlib.h>
-
-
-
- /**                                                                                                                                     
-
-  * main - Entry point                                                                                                                   
-
-  *                                                                                                                                      
-
-  *Return: Always 0 (Success)                                                                                                            
-
-  */
-
-
-
-int main(void)
-
-{
-	
-        char alphab;
-	
-
-	
-        alphab = 'a';
-	
-        while (alphab <= 'z')
-		
-        {
-		
-                putchar(alphab);
-		
-                alphab = alphab + 1;
-		
-        }
-	
-        putchar('\n');
-	
-        return (0);
-	
-}<<kjk
+	alphabL = 'a';
+	while (alphabL <= 'z')
+	{
+		putchar(alphabL);
+		alphabL = alphabL + 1;
+	}
+	alphabU = 'A';
+	while (alphabU <= 'Z')
+	{
+		putchar(alphabU);
+		alphabU = alphabU + 1;
+	}
+	putchar('\n');
+	return (0);
+}
