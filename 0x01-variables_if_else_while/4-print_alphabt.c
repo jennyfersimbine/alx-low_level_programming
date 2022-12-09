@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main_Entry point
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
@@ -16,12 +16,13 @@ int main(void)
 	{
 		if (alphabL == 'e' || 'q')
 		{
-			return (0);
+			/*nothing happens*/
 		} else
 		{
 			putchar(alphabL);
 			alphabL = alphabL + 1;
 		}
 	}
+	putchar('\n');
 	return (0);
 }
