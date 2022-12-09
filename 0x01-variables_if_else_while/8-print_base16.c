@@ -11,9 +11,15 @@ int main(void)
 {
 	int i;
 
-	for (i = 96; i < 122; i++)
+	for (i = 48; i < 58; i++)
 	{
 		putchar(i);
+	}
+	i = 'a';
+	while (i < 'g')
+	{
+		putchar(i);
+		i = i + 1;
 	}
 	putchar('\n');
 	return (0);
