@@ -14,9 +14,12 @@ int main(void)
 	alphabL = 'a';
 	while (alphabL <= 'z')
 	{
-		if (alphabL == 'e' || 'q')
+		if (alphabL == 'e')
 		{
 			/*nothing happens*/
+		} else if (alphabL == 'q')
+		{
+			/*nothing happens, skip*/
 		} else
 		{
 			putchar(alphabL);
