@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - print combination of single digit  numbers
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int i;
+
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+	return (0);
+}
