@@ -16,10 +16,10 @@ int main(void)
 	{
 		if (alphabL == 'e')
 		{
-			/*nothing happens*/
+			alphabL = alphabL + 1;
 		} else if (alphabL == 'q')
 		{
-			/*nothing happens, skip*/
+			alphabL = alphabL + 1;
 		} else
 		{
 			putchar(alphabL);
