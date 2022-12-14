@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/**
+ *main - print putchar
+ *
+ * Return: 0 (Suceess)
+ */
+
+int main(void)
+{
+	putchar("_putchar\n");
+	return (0);
+}
