@@ -4,11 +4,14 @@
 /**
  * main - run functions
  * _putchar - print rint functions
+ * @c: parame
+ *
+ * reset_to_98 - task 1
+ * @n: parameter
+ *
  * Return: always 0
  */
 
-int main(void)
-{
-	_putchar (char c);
-	reset_to_98(int *n);
-}
+int _putchar (char c);
+void reset_to_98(int *n);
+
