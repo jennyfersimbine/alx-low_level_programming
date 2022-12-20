@@ -10,14 +10,18 @@
 
 void print_rev(char *s)
 {
-	int i, lengt, temp;
+	char temp;
+	int i, left, right, lengt;
 
 	lengt = strlen(s);
-	for(i = 0; i < lengt; i++)
+	left = 0;
+	right = lengt - 1;
+	for (i = left; i < right; i++)
 	{
 		temp = s[i];
-		s[i] = s[lengt - i - 1];
-		s[lengt - i - 1] = temp;
+		s[i] = s[right];
+		s[right] = temp;
+		right--;
 	}
 	puts(s);
 }
