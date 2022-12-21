@@ -1,0 +1,24 @@
+#include "main.h"
+#include <stringio.h>
+
+/**
+ * rrev_string - reverse string
+ *@S: reverse parameter
+ */
+
+void rev_string( char *s);
+{
+	char temp;
+	int i, lengt, length;
+	
+	lengt = 0;
+	length = 0;
+	while (s[lengt] != '\0')
+	{
+		lengt++;
+	}
+	length = lengt - 1;
+	for (i = 0; i < lengt; i++)
+	{
+		temp = s[i];
+}
