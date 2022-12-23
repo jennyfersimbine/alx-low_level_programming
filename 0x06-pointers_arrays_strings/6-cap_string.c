@@ -32,7 +32,7 @@ char *cap_string(char *s)
 			}
 		} else
 		{
-			if (s[i] >= 65 && s[i] <= 97)
+			if (s[i] >= 65 && s[i] <= 90)
 			{
 				s[i] += 32;
 			}
