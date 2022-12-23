@@ -11,10 +11,13 @@
 
 char *string_toupper(char *c)
 {
-	char *ret;
-	for (int i = 0; i < sizeof(c); i++)
+	int i; 
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		ret = putchar(toupper(c[i]));
+		if (c[i] >= 'a' && c[i] <= 'z')
+		{
+			c[i] = c[i] -32;
+		}
 	}
-			return (ret);
+	return (0);
 }
