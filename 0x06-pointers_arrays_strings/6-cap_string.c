@@ -41,13 +41,8 @@ char *cap_string(char *s)
 				s[i] -= 32;
 				continue;
 			}
-		} else
-		{
-			if (s[i] >= 65 && s[i] <= 90)
-			{
-				s[i] += 32;
-			}
 		}
+		
 	}
 	return (s);
 }
