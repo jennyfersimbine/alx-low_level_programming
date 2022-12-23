@@ -22,7 +22,7 @@ char *cap_string(char *s)
 				continue;
 			}
 		}
-		if (s[i] == ' ')
+		if (s[i - 1] == ' ')
 		{
 			++i;
 			if (s[i] >= 97 && s[i] <= 122)
