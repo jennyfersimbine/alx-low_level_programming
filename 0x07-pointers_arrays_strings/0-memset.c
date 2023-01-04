@@ -2,11 +2,11 @@
 #include <string.h>
 
 /**
- * memset - fucntion that fills memory with a constant byte.
+ * _memset - fucntion that fills memory with a constant byte.
  * @s: points the memory are
- * @b: constant bytes to fill
+ * @c: constant bytes to fill
  * @n: n bytes of memory area
- * Return:  s
+ * Return:  mem
  */
 
 void *_memset(void *s, int c, size_t n)
