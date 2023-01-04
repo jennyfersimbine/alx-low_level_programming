@@ -9,10 +9,14 @@
  * Return:  s
  */
 
-char *_memset(void *s, char b, unsigned int n)
+void *_memset(void *s, int c, size_t n)
 {
-	char *result;
+	unsigned int i;
+	unsigned char *mem = s, value = c;
 
-	result = *memset(*s, b, n);
-	return (*result);
+	for (i = 0; i < n; i++)
+	{
+		mem[i] = value;
+	}
+	return (mem);
 }
