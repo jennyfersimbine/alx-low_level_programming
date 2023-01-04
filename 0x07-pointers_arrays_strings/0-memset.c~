@@ -1,0 +1,14 @@
+#include "main"
+#include <string.h>
+
+/**
+ * _memset - fucntion that fills memory with a constant byte.
+ * @s: points the memory are
+ * @b: constant bytes to fill
+ * @n: n bytes of memory area 
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	void *memset(void *s, char b, size_t n);
+}
