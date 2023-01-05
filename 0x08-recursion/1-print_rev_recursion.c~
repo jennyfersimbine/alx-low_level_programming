@@ -1,0 +1,19 @@
+#include "main.h
+
+void _print_rev_recursion(char *s)
+{
+	int length = strlen(s);
+	int i = length -1;
+
+	if (i >= 0)
+	{
+		if (s[i] == ' ')
+		{
+			s[i] = '\0';
+			_putchar(&(s[i]) + 1);
+			i--;
+			_print_rev_recursion(s);
+		}
+	}
+	_putchar(s);
+}
