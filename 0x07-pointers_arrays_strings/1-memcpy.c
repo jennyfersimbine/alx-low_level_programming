@@ -9,10 +9,13 @@
  * Return: result
 */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+void *_memcpy(void *dest, void *src, size_t n)
 {
-	char result;
+	char *tpcsrc = (char *)src;
+	char *tpcdest = (char *)dest;
 
-	result = *memcpy(*dest, *src, n);
-	return (result);
+	for (int i = 0; i < n; i++)
+	{
+		tpcdest[i] = tpcsrc[i];
+	}
 }
