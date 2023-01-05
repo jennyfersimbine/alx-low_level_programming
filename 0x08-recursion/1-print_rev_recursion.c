@@ -8,7 +8,7 @@
 
 void _print_rev_recursion(char *s)
 {
-	s = '\0';
+
 	/**
 	 *if (s[i] != '\0')
 	 *{
@@ -24,13 +24,13 @@ void _print_rev_recursion(char *s)
 	 *	_print_rev_recursion(s);
 	 *}
 	 */
-	s = s - 1;
-	_putchar(*s);
+
 	if (*s == '\n')
 	{
 		_putchar('\n');
 		return;
 	}
 	s--;
-	_print_rev_recursion(s);
+	_putchar(*s);
+	_print_rev_recursion(s-1);
 }
