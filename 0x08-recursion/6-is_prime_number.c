@@ -9,15 +9,13 @@
 
 int checkin(int nr, int i)
 {
-	if (i < nr )
+	if (i < nr)
 	{
 		if (nr % i == 0)
 		{
 			return (0);
-		} else
-		{
-			return (checkin(nr, i + 1));
 		}
+		return (checkin(nr, i + 1));
 	}
 	return (1);
 }
