@@ -26,7 +26,6 @@ char *create_array(unsigned int size, char c)
 	while (i < size)
 	{
 		arc[i] = c;
-		putchar(arc[i]);
 		i++;
 	}
 	return (arc);
