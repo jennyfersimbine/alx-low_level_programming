@@ -3,7 +3,7 @@
 /**
  * is_prime_number - eturns 1 if the input integer is a prime number
  * @n: nr
- * Return; 1 if positive
+ * Return: 1 if positive
  */
 int is_prime_number(int n)
 {
