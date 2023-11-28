@@ -9,28 +9,40 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int filin, nrLetters, i, lettersPrinted;
-char *fc = malloc( letters * sizeof(char));
+	int filin, nrLetters, i, lettersPrinted;
+	char *fc = malloc((letters + 1) * sizeof(char));
 
-filin = open(filename, O_RDONLY);
-if (filin == -1)
-	return (0);
+	if (fc == NULL)
+		return (0);
 
-if (filename == NULL)
-	return (0);
+	if (filename == NULL)
+	{
+		free(fc);
+		return (0);
+	}
+	filin = open(filename, O_RDONLY);
+	if (filin == -1)
+	{
+		free(fc);
+		return (0);
+	}
+	nrLetters = read(filin, fc, letters);
+	if (nrLetters == -1)
+	{
+		free(fc);
+		close(filin);
+		return (0);
+	}
+	fc[nrLetters] = '\0';
 
-nrLetters = read(filin, fc, letters);
-if (nrLetters == -1)
-	return (0);
-
-fc[letters] = '\0';
-
-i = 0;
-while (fc[i] != '\0')
-{
-	lettersPrinted += _putchar(fc[i]);
-    i++;
-}
-  fclose(filin);
-  return (1);
+	i = 0;
+	lettersPrinted = 0;
+	while (fc[i] != '\0')
+	{
+		lettersPrinted += put_char(fc[i]);
+		i++;
+	}
+	close(filin);
+	free(fc);
+	return (1);
 }
