@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int filin;
 	ssize_t nrLetters, letterPrinted = 0, totalPrinted = 0;
 	char *fc = (char *) calloc((letters + 1), sizeof(char));
-	/* 
+	/*
 	 * using calloc to initialize the buffer to 0s,
 	 * to ensure all values are initially set to zero
 	 */
