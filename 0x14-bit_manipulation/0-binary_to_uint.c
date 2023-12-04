@@ -12,12 +12,13 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int slen, i, res;
 	int x;
 
+	if (b == NULL)
+		return (0);
+
 	slen = 0;
 	while (b[slen] != '\0')
 	{
-		if (b[slen] != 0 || b[slen] != 1)
-			return (0);
-		if (b == NULL)
+		if (b[slen] != '0' || b[slen] != '1')
 			return (0);
 		slen++;
 	}
@@ -25,9 +26,9 @@ unsigned int binary_to_uint(const char *b)
 	res = 0;
 	for (x = slen; x > -1; x--)
 	{
-		for (i = 0; i < (slen + 1); i++)
+		for (i = 0; i < slen; i++)
 		{
-			res += (pow(b[i],x)) * b[i];
+			res += (pow(2,x)) * (b[i] - '0');
 		}
 	}
 	return (res);

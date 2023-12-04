@@ -9,9 +9,12 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int filin, nrLetters, i, lettersPrinted;
-	char *fc = malloc((letters + 1) * sizeof(char));
-
+	int filin;
+	ssize_t nrLetters, letterPrinted = 0, totalPrinted = 0;
+	char *fc = (char *) calloc((letters + 1), sizeof(char));
+	/* using calloc to initialize the buffer to 0s,
+	 * to ensure all values are initially set to zero
+	 */
 	if (fc == NULL)
 		return (0);
 
@@ -35,14 +38,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	fc[nrLetters] = '\0';
 
-	i = 0;
-	lettersPrinted = 0;
-	while (fc[i] != '\0')
+	while (nrLetters > 0)
 	{
-		lettersPrinted += put_char(fc[i]);
-		i++;
+		letterPrinted = write(STDOUT_FILENO, fc + totalPrinted, nrLetters);
+		if (letterPrinted == -1)
+		{
+			free(fc);
+			close(filin);
+			return (0);
+		}
+		totalPrinted += letterPrinted;
+		nrLetters -= letterPrinted;
 	}
 	close(filin);
 	free(fc);
-	return (1);
+	return (letterPrinted);
 }
