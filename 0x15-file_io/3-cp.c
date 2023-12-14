@@ -39,8 +39,8 @@ int main(int argc, char **argv)
 	{
 	if ((write(fileD_to, fc, readBytes)) == -1)
 	{
-		exit(99);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	}
 	if (readBytes == -1)
@@ -50,13 +50,13 @@ int main(int argc, char **argv)
 	}
 	if ((close(fileD_from)) == -1)
 	{
-		exit(100);
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileD_from);
+		exit(100);
 	}
 	if ((close(fileD_to)) == -1)
 	{
-		exit(100);
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileD_to);
+		exit(100);
 	}
 	return (0);
 }
