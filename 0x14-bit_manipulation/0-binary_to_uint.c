@@ -48,7 +48,7 @@ unsigned int binary_to_uint(const char *b)
 	res = 0;
 	for (x = slen - 1; x > -1; x--)
 	{
-			res += (_pow(2, slen - 1 - x)) * (b[x] - '0');
+		res += (_pow(2, slen - 1 - x)) * (b[x] - '0');
 	}
 	return (res);
 }

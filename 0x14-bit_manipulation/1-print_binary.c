@@ -1,30 +1,26 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * print_binary - prints the binary representation of a number
- * @n: number to represent
+ * @n: unsigned int to convert
  */
-
-#include "main.h"
-
-int remain(int nr)
-{
-	int binDiv = 2;
-	while (nr >= binDiv)
-		nr -= binDiv;
-	return (nr);
-}
 
 void print_binary(unsigned long int n)
 {
-char *bstr = "";
-
-while (n > 0)
-{
-remainder = remain(n);
-/*register each bit or concatenate in string*/
-bstr = strcat(bstr, remainder);
-n = n >> 1;
-}
-printf("%s", bstr);
+	if (n == 0)
+	{
+		_putchar(0 + '0');
+		return;
+	}
+	if (n > 0)
+	{
+		while (n > 0)
+		{
+			n = n >> 1;
+			if (n & 1)
+				_putchar(1 + '0');
+			else
+				_putchar(0 + '0');
+		}
+	}
 }
